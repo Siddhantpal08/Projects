@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Laptop Recommendation Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <input type="text" name="text" class="search-bar" placeholder="Search...">
+            <ul class="nav-links">
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="index.html">Home</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="Category.html">Category</a></span>
+                </label>
+                    
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"> <a href="about.html">About</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" checked="">
+                    <span class="name"><a href="profile.html">login</a></span>
+                </label>
+</div>
+            </ul>
+    </nav>
+    <hr>
+    <span id="username">Guest</span>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="error" id="loginResult"></div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(loginForm);
+                    fetch('login.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const loginResult = document.getElementById('loginResult');
+                        loginResult.innerText = data.message;
+                        if (data.success) {
+                            loginResult.style.color = 'green';
+                            setTimeout(() => {
+                                window.location.href = 'profile.html';
+                            }, 1000);
+                        } else {
+                            loginResult.style.color = 'red';
+                        }
+                    })
+                    .catch(error => console.error('There was a problem with the fetch operation:', error));
+                });
+            }
+        });
+    </script>
+</body>
+</html>

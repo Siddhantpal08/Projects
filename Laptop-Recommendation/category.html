@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Laptop Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <input type="text" name="text" class="search-bar" placeholder="Search...">
+            <ul class="nav-links">
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="index.html">Home</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="Category.html">Category</a></span>
+                </label>
+                    
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"> <a href="about.html">About</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" checked="">
+                    <span class="name"><a href="profile.html">login</a></span>
+                </label>
+</div>
+            </ul>
+    </nav>
+    <hr>
+    <span id="username">Guest</span>
+    <div class="container">
+        <h1>Categories</h1>
+        <h1> </h1>
+        <div id="categoryContent">
+            <button onclick="location.href='profession.html'"><span class="text">Profession</span></button>
+            <button onclick="location.href='budget.html'"><span class="text">Budget</span></button>
+            <button onclick="location.href='specifications.html'"><span class="text">Specifications</span></button> 
+        </div>
+        <div class="infodiv">
+            <h3 class="heading_2">Profession</h3>
+            <p class="info_2">Based on need in your profession.</p>
+        </div>
+        <div class="infodiv">
+            <h3 class="heading_2">Budget</h3>
+            <p class="info_2">Based on bedget of the user.</p>
+        </div>
+        <div class="infodiv">
+            <h3 class="heading_2">Specifications</h3>
+            <p class="info_2">Based on specified need of user.</p>
+        </div>
+    </div>
+    <div id="preferences"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget - Laptop Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <input type="text" name="text" class="search-bar" placeholder="Search...">
+            <ul class="nav-links">
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="index.html">Home</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="Category.html">Category</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"> <a href="about.html">About</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" checked="">
+                    <span class="name"><a href="profile.html">Login</a></span>
+                </label>
+            </div>
+            </ul>
+    </nav>
+    <hr>
+    <span id="username">Guest</span>
+    <div class="container">
+        <h1>Budget</h1>
+        <p>Select your budget range to find the best laptop recommendations.</p>
+        <form id="budgetForm">
+            <label for="budget">Choose Budget: ₹<span id="budgetValue"></span></label>
+            <input type="range" id="budget" name="budget" min="10000" max="200000" step="5000">
+            <label for="brand">Brand (optional):</label>
+            <input type="text" id="brand" name="brand" class="input1" placeholder="Brand Name">
+            <button type="submit">Get Recommendation</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <div id="preferences"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>

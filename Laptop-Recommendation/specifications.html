@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifications - Laptop Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <input type="text" name="text" class="search-bar" placeholder="Search...">
+        <ul class="nav-links">
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="index.html">Home</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="Category.html">Category</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name"><a href="about.html">About</a></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" checked="">
+                    <span class="name"><a href="profile.html">Login</a></span>
+                </label>
+            </div>
+        </ul>
+    </nav>
+    <hr>
+    <span id="username">Guest</span>
+    <div class="container">
+        <h1>Specifications</h1>
+        <p>Select your desired specifications to find the best laptop recommendations.</p>
+        <form id="specificationsForm">
+            <label for="ram">RAM:</label>
+            <select id="ram" name="ram">
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+            </select>
+
+            <label for="storage">Storage:</label>
+            <select id="storage" name="storage">
+                <option value="256GB">256GB</option>
+                <option value="512GB">512GB</option>
+                <option value="1TB">1TB</option>
+            </select>
+
+            <!-- <label for="graphics">Graphics:</label>
+            <select id="graphics" name="graphics">
+                <option value="integrated">Integrated</option>
+                <option value="dedicated">Dedicated</option>
+            </select> -->
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <div id="preferences"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>

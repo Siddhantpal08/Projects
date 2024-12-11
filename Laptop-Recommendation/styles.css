@@ -1,0 +1,423 @@
+@font-face {
+    font-family: BalooBhai2;
+    src: url(BalooBhai2-VariableFont_wght.ttf);
+}
+/* Base CSS */
+body {
+    font-family: "Baloo Bhai 2", sans-serif;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.baloo-bhai-2 body {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.radio-inputs {
+    position: absolute;
+    top: 5px;
+    display: flex;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    right: 10px;
+    width: 300px;
+    font-size: 16px;
+  }
+  a :active {
+    background-color: #fff;
+    transform: scale(.95);
+  }
+  a {
+    text-decoration:none;
+    padding: .9em;
+    margin: -2em;
+    transition: transform .15s ease-in-out;
+    color: inherit;
+  }
+
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: #6d6d6d;
+    transition: all .15s ease-in-out;
+    width: 4rem;
+    height: 1rem;
+
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #fff;
+    font-weight: 600;
+    z-index: 2;
+    transition: all .15s ease-in-out;
+  }
+
+.nav {
+    width: 100%;
+    background-color: #000000;
+    padding: 10px 0;
+    position: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    background-color: #000000;
+    border-radius: 4px;
+}
+hr{
+    color: #ffffff;
+    width: 99%;
+    margin-top: 10px
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    width: 200px;
+}
+
+.dropdown li a {
+    padding: 10px;
+}
+
+
+.search-bar {
+    padding: 10px;
+    position: absolute;
+    left: 34%;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    width: 30%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-weight: 500;
+    font-size: 1.20vw;
+    color: #fff;
+    background-color: rgb(28,28,30);
+    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    transition: .4s;
+    padding: 10px;
+}
+
+  .search-bar:hover {
+    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+  }
+  
+  .search-bar:focus {
+    box-shadow: 0 0 0 .15vw skyblue;
+  }
+.container {
+    margin: 60px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #000000;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+
+button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 50px;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 5px;
+    padding: 3px;
+  }
+  
+  button:active,
+  button:hover {
+    outline: 0;
+  }
+  
+  button span {
+    background-color: rgb(5, 6, 45);
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  button:hover span {
+    background: none;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+  
+
+.info {
+    margin-top: 200px;
+    text-align: left;
+    width: 99%;
+}
+
+.info h2 {
+    font-size: 4.5em;
+    margin-top: 150px;
+    margin-bottom: 70px;
+    position: relative;
+    left: 5%;
+}
+
+.info p {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.heading_1{
+    margin-bottom: 20px;
+    font-size: 2em;
+    position: relative;
+    left: 5.5%;
+}
+.info_1{
+    color: #8a8a8a;
+    position: relative;
+    left: 5.5%;
+}
+
+#categoryContent{
+    margin-top: -2em;
+}
+
+.heading_2{
+    margin-bottom: 20px;
+    font-size: 2em;
+    position: relative;
+}
+footer{
+    align-self: center;}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+
+    .container {
+        margin-top: 80px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1.1em;
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .info p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .container {
+        margin-top: 120px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .container {
+        margin-top: 150px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    button {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        font-size: 1em;
+    }
+}
+/* From Uiverse.io by Jaareet */ 
+.input1 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-weight: 500;
+    font-size: .8vw;
+    color: #fff;
+    background-color: rgb(28,28,30);
+    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.4vw;
+    max-width: 190px;
+    transition: .4s;
+  }
+  
+  .input1:hover {
+    box-shadow: 0 0 0 .15vw rgba(255, 255, 255, 0.186);
+  }
+  
+  .input1:focus {
+    box-shadow: 0 0 0 .15vw skyblue;
+  }
+    range{
+        color: gray;
+    }
